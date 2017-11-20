@@ -194,7 +194,7 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\RecognizeMe2Controller.cs" />
+    <Compile Include="Controllers\RecognizeMesController.cs" />
     <Compile Include="DAL\AccountDetailsContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -274,15 +274,16 @@
     <Content Include="Views\AccountDetails\Details.cshtml" />
     <Content Include="Views\AccountDetails\Edit.cshtml" />
     <Content Include="Views\AccountDetails\Index.cshtml" />
-    <Content Include="Views\RecognizeMe2\Create.cshtml" />
-    <Content Include="Views\RecognizeMe2\Delete.cshtml" />
-    <Content Include="Views\RecognizeMe2\Details.cshtml" />
-    <Content Include="Views\RecognizeMe2\Edit.cshtml" />
-    <Content Include="Views\RecognizeMe2\Index.cshtml" />
     <Content Include="Views\Suggestions\Suggestions.cshtml" />
     <Content Include="Views\Dashboard\DIndex.cshtml" />
     <Content Include="Views\AccountDetails\DuplicateUser.cshtml" />
     <Content Include="Views\AccountDetails\NotAuthorized.cshtml" />
+    <Content Include="Views\RecognizeMes\Create.cshtml" />
+    <Content Include="Views\RecognizeMes\Delete.cshtml" />
+    <Content Include="Views\RecognizeMes\Details.cshtml" />
+    <Content Include="Views\RecognizeMes\Edit.cshtml" />
+    <Content Include="Views\RecognizeMes\Index.cshtml" />
+    <Content Include="Views\RecognizeMes\NotAuthorizedRecognizeMes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

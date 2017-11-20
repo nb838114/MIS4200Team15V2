@@ -12,19 +12,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.firstName)
+            @Html.DisplayNameFor(model => model.PersonGettingAward.firstName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.firstName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.lastName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.lastName)
+            @Html.DisplayFor(model => model.PersonGettingAward.firstName)
         </dd>
 
         <dt>
@@ -44,11 +36,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.coreValue)
+            @Html.DisplayNameFor(model => model.CoreValue)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.coreValue)
+            @Html.DisplayFor(model => model.CoreValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentDateTime)
         </dd>
 
     </dl>

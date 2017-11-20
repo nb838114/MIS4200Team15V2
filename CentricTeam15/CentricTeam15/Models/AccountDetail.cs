@@ -20,6 +20,9 @@ namespace CentricTeam15.Models
         [Display(Name = "Last Name")]
         public string lastName { get; set; }
 
+        [Display(Name = "Employee Name")]
+        public string fullName { get { return lastName + "," + firstName; } }
+
         [Required]
         [Display(Name = "Bussiness Unit")]
         public string bussinessUnit { get; set; }

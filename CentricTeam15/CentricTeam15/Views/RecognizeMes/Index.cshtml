@@ -12,10 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.firstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.lastName)
+            @Html.DisplayNameFor(model => model.PersonGettingAward.firstName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.bussinessUnit)
@@ -24,7 +21,10 @@
             @Html.DisplayNameFor(model => model.description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.coreValue)
+            @Html.DisplayNameFor(model => model.CoreValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentDateTime)
         </th>
         <th></th>
     </tr>
@@ -32,10 +32,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.firstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.lastName)
+            @Html.DisplayFor(modelItem => item.PersonGettingAward.firstName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.bussinessUnit)
@@ -44,7 +41,10 @@
             @Html.DisplayFor(modelItem => item.description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.coreValue)
+            @Html.DisplayFor(modelItem => item.CoreValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentDateTime)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

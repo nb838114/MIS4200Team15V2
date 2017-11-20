@@ -1,0 +1,58 @@
+﻿@model CentricTeam15.Models.RecognizeMe
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RecognizeMe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonGettingAward.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonGettingAward.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bussinessUnit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bussinessUnit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoreValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoreValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentDateTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
