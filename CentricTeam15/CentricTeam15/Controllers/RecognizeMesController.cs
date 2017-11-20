@@ -48,7 +48,7 @@ namespace CentricTeam15.Controllers
         // GET: RecognizeMes/Create
         public ActionResult Create()
         {
-            ViewBag.employeeID = new SelectList(db.AccountDetails, "ID", "firstName");
+            ViewBag.PersonGettingAward = new SelectList(db.AccountDetails, "ID", "fullName");
             return View();
         }
 

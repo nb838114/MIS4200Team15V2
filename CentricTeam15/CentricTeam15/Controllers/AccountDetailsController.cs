@@ -70,7 +70,7 @@ namespace CentricTeam15.Controllers
                 try
                 {
                     db.SaveChanges();
-                    return RedirectToAction("DIndex");
+                    return RedirectToAction("Index");
 
                     HttpPostedFileBase file = Request.Files["photo"]; //(A) – see notes below
                                                                       //accountDetail.photo = Guid.NewGuid();
@@ -130,11 +130,11 @@ namespace CentricTeam15.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Edit([Bind(Include = "ID,firstName,lastName,bussinessUnit,title,hireDate,photo,userBiography")] AccountDetail accountDetail)
+        public ActionResult Edit([Bind(Include = "ID,firstName,lastName,bussinessUnit,title,hireDate,photo,userBiography")] AccountDetail ID)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(accountDetail).State = EntityState.Modified;
+                db.Entry(ID).State = EntityState.Modified;
 
                 HttpPostedFileBase file = Request.Files["photo"];
 
@@ -144,12 +144,12 @@ namespace CentricTeam15.Controllers
                     if (fi.Extension != ".jpeg" && fi.Extension != ".jpg" && fi.Extension != ".png")
                     {
                         TempData["Errormsg"] = "Image File Extension is not valid";
-                        return View(accountDetail);
+                        return View(ID);
                     }
                     else
                     {
                         // there is a new image, so delete the old one, if any, first
-                        AccountDetail photoOld = db.AccountDetails.Find(accountDetail.photo);
+                        AccountDetail photoOld = db.AccountDetails.Find(ID.photo);
                         string photoName = photoOld.photo;
                         string path = Server.MapPath("~/_Images/" + photoName);
                         // there may not be a file, so use try/catch
@@ -169,9 +169,9 @@ namespace CentricTeam15.Controllers
                             // delete failed - probably not a real issue
                         }
                         // now upload the new image
-                        accountDetail.photo = accountDetail.ID + fi.Extension;
+                        ID.photo = ID.ID + fi.Extension;
 
-                        file.SaveAs(Server.MapPath("~/_Images/" + accountDetail.photo));
+                        file.SaveAs(Server.MapPath("~/_Images/" + ID.photo));
 
                     }
                 }
@@ -179,7 +179,7 @@ namespace CentricTeam15.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(accountDetail);
+            return View(ID);
         }
 
         // GET: AccountDetails/Delete/5
@@ -239,38 +239,7 @@ namespace CentricTeam15.Controllers
         }
 
 
-        //Upload Photo
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Upload([Bind(Include = "photo")] AccountDetail accountDetail)
-        {
-            if (ModelState.IsValid)
-            {
-                HttpPostedFileBase file = Request.Files["photo"]; //(A) – see notes below
-                //accountDetail.photo = Guid.NewGuid();
-                if (file != null && file.FileName != null && file.FileName != "") //(B)
-                {
-                    FileInfo fi = new FileInfo(file.FileName); //(C)
-                    if (fi.Extension != ".jpeg" && fi.Extension != ".jpg" && fi.Extension != ".png") //(D)
-                    {
-                        TempData["Errormsg"] = "Image File Extension is not valid"; //(E)
-                        return View(accountDetail);
-                    }
-                    else
-                    {
-                        accountDetail.photo = accountDetail.ID + fi.Extension; //(F)
-
-                        file.SaveAs(Server.MapPath("~/_Images/" + accountDetail.photo));  //(G)
-
-                    }
-                }
-                db.AccountDetails.Add(accountDetail);
-                db.SaveChanges();
-                return RedirectToAction("Index", "AccountDetail");
-            }
-
-            return View(accountDetail);
-        }
+        
 
     }
 
