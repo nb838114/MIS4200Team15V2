@@ -9,12 +9,12 @@ namespace CentricTeam15.Models
 {
     public class RecognizeMe
     {
-        [Required]
-        public int ID { get; set; }
+        [Key]
+        public int recognitionID { get; set; }
 
         [Required]
         [Display(Name = "Employee ID")]
-        public Guid employeeID { get; set; }
+        public Guid ID { get; set; }
 
         [Required]
         [Display(Name = "Business Unit")]
@@ -38,7 +38,7 @@ namespace CentricTeam15.Models
 
         }
 
-        [System.ComponentModel.DataAnnotations.Schema.ForeignKey("employeeID")]
+        [System.ComponentModel.DataAnnotations.Schema.ForeignKey("ID")]
 
         public virtual AccountDetail PersonGettingAward { get; set; }
 

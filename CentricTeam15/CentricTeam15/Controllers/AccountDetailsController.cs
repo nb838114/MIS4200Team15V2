@@ -69,9 +69,6 @@ namespace CentricTeam15.Controllers
 
                 try
                 {
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
-
                     HttpPostedFileBase file = Request.Files["photo"]; //(A) – see notes below
                                                                       //accountDetail.photo = Guid.NewGuid();
                     if (file != null && file.FileName != null && file.FileName != "") //(B)
@@ -202,10 +199,10 @@ namespace CentricTeam15.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(Guid id)
         {
-            AccountDetail accountDetail = db.AccountDetails.Find(id);
+            AccountDetail ID = db.AccountDetails.Find(id);
 
-            string imageName = accountDetail.photo; //(A)
-            string path = Server.MapPath("~/_Images/" + imageName); //(B)
+            string photoName = ID.photo; //(A)
+            string path = Server.MapPath("~/_Images/" + photoName); //(B)
                                                                     // there may not be a file, so use try/catch
             try
             {
@@ -223,7 +220,7 @@ namespace CentricTeam15.Controllers
                 // delete failed - probably not a real issue (F)
             }
 
-            db.AccountDetails.Remove(accountDetail);
+            db.AccountDetails.Remove(ID);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -48,7 +48,7 @@ namespace CentricTeam15.Controllers
         // GET: RecognizeMes/Create
         public ActionResult Create()
         {
-            ViewBag.PersonGettingAward = new SelectList(db.AccountDetails, "ID", "fullName");
+            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "fullName");
             return View();
         }
 
@@ -57,16 +57,17 @@ namespace CentricTeam15.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,employeeID,bussinessUnit,description,CoreValue,CurrentDateTime")] RecognizeMe recognizeMe)
+        public ActionResult Create([Bind(Include = "ID,recognitionID,bussinessUnit,description,CoreValue,CurrentDateTime")] RecognizeMe recognizeMe)
         {
             if (ModelState.IsValid)
             {
+                recognizeMe.CurrentDateTime = DateTime.Now;
                 db.RecognizeMes.Add(recognizeMe);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.employeeID = new SelectList(db.AccountDetails, "ID", "firstName", recognizeMe.employeeID);
+            ViewBag.employeeID = new SelectList(db.AccountDetails, "ID", "fullName", recognizeMe.ID);
             return View(recognizeMe);
         }
 
@@ -82,7 +83,7 @@ namespace CentricTeam15.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.employeeID = new SelectList(db.AccountDetails, "ID", "firstName", recognizeMe.employeeID);
+            ViewBag.employeeID = new SelectList(db.AccountDetails, "ID", "fullName", recognizeMe.ID);
             return View(recognizeMe);
         }
 
@@ -91,7 +92,7 @@ namespace CentricTeam15.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,employeeID,bussinessUnit,description,CoreValue,CurrentDateTime")] RecognizeMe recognizeMe)
+        public ActionResult Edit([Bind(Include = "ID,recognitionID,bussinessUnit,description,CoreValue,CurrentDateTime")] RecognizeMe recognizeMe)
         {
             if (ModelState.IsValid)
             {
@@ -99,7 +100,7 @@ namespace CentricTeam15.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.employeeID = new SelectList(db.AccountDetails, "ID", "firstName", recognizeMe.employeeID);
+            ViewBag.employeeID = new SelectList(db.AccountDetails, "ID", "fullName", recognizeMe.ID);
             return View(recognizeMe);
         }
 
