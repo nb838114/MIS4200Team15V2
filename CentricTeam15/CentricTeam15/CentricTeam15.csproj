@@ -200,6 +200,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DbContext\Configuration.cs" />
+    <Compile Include="Models\CommitToDeliveryExcellence.cs" />
     <Compile Include="Models\RecognizeMe.cs" />
     <Compile Include="Models\AccountDetail.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -294,6 +295,11 @@
     <Content Include="Views\RecognizeMes\Edit.cshtml" />
     <Content Include="Views\RecognizeMes\Index.cshtml" />
     <Content Include="Views\RecognizeMes\NotAuthorizedRecognizeMes.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Create.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Delete.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Details.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Edit.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
