@@ -222,16 +222,13 @@
     </Content>
     <Content Include="_Images\CentricLogo.PNG" />
     <Content Include="_Images\Chloe Marathon pic.jpg" />
-    <Content Include="_Images\Co-workers after marathon.jpg" />
     <Content Include="_Images\Commit to Delivery Excellence- Lily.jpg" />
-    <Content Include="_Images\Invest in Exceptional Culture- Sandra sized.jpg" />
-    <Content Include="_Images\Invest in Exceptional Culture.jpg" />
-    <Content Include="_Images\Live a Balanced Life 1 sized.jpg" />
+    <Content Include="_Images\Embrace Integrity and Openness 2.jpg" />
+    <Content Include="_Images\Ignite Passion for the Greater Good sized 3.jpg" />
+    <Content Include="_Images\Invest in Exceptional Culture 2 sized 1.jpg" />
     <Content Include="_Images\Live a Balanced Life 2.jpg" />
-    <Content Include="_Images\Strive to Innovate- Chris.jpg" />
+    <Content Include="_Images\Practice Responsible Stewardship.jpg" />
     <Content Include="_Images\Strive to Innovate- Nick sized.jpg" />
-    <Content Include="_Images\Strive to Innovate- Nick.jpg" />
-    <Content Include="_Images\Strive to Innovate.jpg" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
