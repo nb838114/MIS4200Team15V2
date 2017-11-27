@@ -200,6 +200,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DbContext\Configuration.cs" />
+    <Compile Include="Models\CommitToDeliveryExcellence.cs" />
     <Compile Include="Models\RecognizeMe.cs" />
     <Compile Include="Models\AccountDetail.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -282,7 +283,7 @@
     <Content Include="Views\AccountDetails\Edit.cshtml" />
     <Content Include="Views\AccountDetails\Index.cshtml" />
     <Content Include="Views\Suggestions\Suggestions.cshtml" />
-    <Content Include="Views\Dashboard\DIndex.cshtml" />
+    <Content Include="Views\AccountDetails\DIndex.cshtml" />
     <Content Include="Views\AccountDetails\DuplicateUser.cshtml" />
     <Content Include="Views\AccountDetails\NotAuthorized.cshtml" />
     <Content Include="Views\RecognizeMes\Create.cshtml" />
@@ -291,9 +292,15 @@
     <Content Include="Views\RecognizeMes\Edit.cshtml" />
     <Content Include="Views\RecognizeMes\Index.cshtml" />
     <Content Include="Views\RecognizeMes\NotAuthorizedRecognizeMes.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Create.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Delete.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Details.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Edit.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Dashboard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
