@@ -200,11 +200,17 @@
     </Compile>
     <Compile Include="Migrations\DbContext\Configuration.cs" />
     <Compile Include="Models\CommitToDeliveryExcellence.cs" />
+    <Compile Include="Models\EmbraceIntegrityandOpenness.cs" />
+    <Compile Include="Models\IgnitePassionForTheGreaterGood.cs" />
+    <Compile Include="Models\InvestInAnExceptionalCulture.cs" />
+    <Compile Include="Models\LiveABalancedLife.cs" />
+    <Compile Include="Models\PracticeResponsibleStewardship.cs" />
     <Compile Include="Models\RecognizeMe.cs" />
     <Compile Include="Models\AccountDetail.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\StriveToInnovate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -290,11 +296,6 @@
     <Content Include="Views\RecognizeMes\Edit.cshtml" />
     <Content Include="Views\RecognizeMes\Index.cshtml" />
     <Content Include="Views\RecognizeMes\NotAuthorizedRecognizeMes.cshtml" />
-    <Content Include="Views\CommitToDeliveryExcellences\Create.cshtml" />
-    <Content Include="Views\CommitToDeliveryExcellences\Delete.cshtml" />
-    <Content Include="Views\CommitToDeliveryExcellences\Details.cshtml" />
-    <Content Include="Views\CommitToDeliveryExcellences\Edit.cshtml" />
-    <Content Include="Views\CommitToDeliveryExcellences\Index.cshtml" />
     <Content Include="Views\AccountDetails\Dashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
