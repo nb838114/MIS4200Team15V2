@@ -191,7 +191,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AccountDetailsController.cs" />
-    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RecognizeMesController.cs" />
@@ -283,7 +282,6 @@
     <Content Include="Views\AccountDetails\Edit.cshtml" />
     <Content Include="Views\AccountDetails\Index.cshtml" />
     <Content Include="Views\Suggestions\Suggestions.cshtml" />
-    <Content Include="Views\AccountDetails\DIndex.cshtml" />
     <Content Include="Views\AccountDetails\DuplicateUser.cshtml" />
     <Content Include="Views\AccountDetails\NotAuthorized.cshtml" />
     <Content Include="Views\RecognizeMes\Create.cshtml" />
@@ -297,10 +295,10 @@
     <Content Include="Views\CommitToDeliveryExcellences\Details.cshtml" />
     <Content Include="Views\CommitToDeliveryExcellences\Edit.cshtml" />
     <Content Include="Views\CommitToDeliveryExcellences\Index.cshtml" />
+    <Content Include="Views\AccountDetails\Dashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Dashboard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
