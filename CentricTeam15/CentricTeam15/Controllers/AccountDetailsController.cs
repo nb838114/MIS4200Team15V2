@@ -235,6 +235,22 @@ namespace CentricTeam15.Controllers
 
         }
 
+        [Authorize]
+
+        public ActionResult Dashboard()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                //return View(db.AccountDetails.ToList());
+                return View("Dashboard");
+            }
+
+            else
+            {
+                return View("NotAuthorized");
+            }
+        }
+
 
         
 

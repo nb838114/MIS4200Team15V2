@@ -6,7 +6,7 @@ using System.Web;
 
 namespace CentricTeam15.Models
 {
-    public class CommitToDeliveryExcellence
+    public class EmbraeIntegrityandOpenness
     {
         [Required]
         [Display(Name = "First Name")]
