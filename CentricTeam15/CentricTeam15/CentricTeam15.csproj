@@ -191,6 +191,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AccountDetailsController.cs" />
+    <Compile Include="Controllers\CommitToDeliveryExcellencesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RecognizeMesController.cs" />
@@ -297,6 +298,11 @@
     <Content Include="Views\RecognizeMes\Index.cshtml" />
     <Content Include="Views\RecognizeMes\NotAuthorizedRecognizeMes.cshtml" />
     <Content Include="Views\AccountDetails\Dashboard.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Create.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Delete.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Details.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Edit.cshtml" />
+    <Content Include="Views\CommitToDeliveryExcellences\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -328,7 +334,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>62801</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

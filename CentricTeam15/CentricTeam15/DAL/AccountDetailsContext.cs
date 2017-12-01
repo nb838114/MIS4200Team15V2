@@ -17,13 +17,13 @@ namespace CentricTeam15.DAL
 
         public DbSet<AccountDetail> AccountDetails { get; set; }
         public DbSet<RecognizeMe> RecognizeMes { get; set; }
-        //public DbSet<CommitToDeliveryExcellence> CommitToDeliveryExcellences { get; set; }
-        //public DbSet<EmbraceIntegrityandOpenness> EmbraceIntegrityandOpennesses { get; set; }
-        //public DbSet<IgnitePassionForTheGreaterGood> IgnitePassionForTheGreaterGoods { get; set; }
-        //public DbSet<InvestInAnExceptionalCulture> InvestInAnExceptionalCultures { get; set; }
-        //public DbSet<LiveABalancedLife> LiveABalancedLifes { get; set; }
-        //public DbSet<PracticeResponsibleStewardship> PracticeResponsibleStewardships { get; set; }
-        //public DbSet<StriveToInnovate> StriveToInnovates { get; set; }
+        public DbSet<CommitToDeliveryExcellence> CommitToDeliveryExcellences { get; set; }
+        public DbSet<EmbraceIntegrityandOpenness> EmbraceIntegrityandOpennesses { get; set; }
+        public DbSet<IgnitePassionForTheGreaterGood> IgnitePassionForTheGreaterGoods { get; set; }
+        public DbSet<InvestInAnExceptionalCulture> InvestInAnExceptionalCultures { get; set; }
+        public DbSet<LiveABalancedLife> LiveABalancedLifes { get; set; }
+        public DbSet<PracticeResponsibleStewardship> PracticeResponsibleStewardships { get; set; }
+        public DbSet<StriveToInnovate> StriveToInnovates { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
