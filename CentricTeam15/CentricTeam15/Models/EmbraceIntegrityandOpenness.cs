@@ -18,5 +18,9 @@ namespace CentricTeam15.Models
         [Required]
         [Display(Name = "Last Name")]
         public string lastName { get; set; }
+
+        [Required]
+        [Display(Name = "Suggestion")]
+        public string ioSuggestion { get; set; }
     }
 }

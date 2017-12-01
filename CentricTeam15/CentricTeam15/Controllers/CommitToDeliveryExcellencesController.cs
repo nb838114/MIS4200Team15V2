@@ -47,7 +47,7 @@ namespace CentricTeam15.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "deID,fistName,lastName")] CommitToDeliveryExcellence commitToDeliveryExcellence)
+        public ActionResult Create([Bind(Include = "deID,fistName,lastName,deSuggestion")] CommitToDeliveryExcellence commitToDeliveryExcellence)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace CentricTeam15.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "deID,fistName,lastName")] CommitToDeliveryExcellence commitToDeliveryExcellence)
+        public ActionResult Edit([Bind(Include = "deID,fistName,lastName,deSuggestion")] CommitToDeliveryExcellence commitToDeliveryExcellence)
         {
             if (ModelState.IsValid)
             {

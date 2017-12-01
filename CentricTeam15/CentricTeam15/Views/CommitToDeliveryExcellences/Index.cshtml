@@ -17,6 +17,9 @@
         <th>
             @Html.DisplayNameFor(model => model.lastName)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.deSuggestion)
+        </th>
         <th></th>
     </tr>
 
@@ -29,7 +32,9 @@
             @Html.DisplayFor(modelItem => item.lastName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.deID }) |
+            @Html.DisplayFor(modelItem => item.deSuggestion)
+        </td>
+        <td>
             @Html.ActionLink("Details", "Details", new { id=item.deID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.deID })
         </td>

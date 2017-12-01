@@ -301,7 +301,6 @@
     <Content Include="Views\CommitToDeliveryExcellences\Create.cshtml" />
     <Content Include="Views\CommitToDeliveryExcellences\Delete.cshtml" />
     <Content Include="Views\CommitToDeliveryExcellences\Details.cshtml" />
-    <Content Include="Views\CommitToDeliveryExcellences\Edit.cshtml" />
     <Content Include="Views\CommitToDeliveryExcellences\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
