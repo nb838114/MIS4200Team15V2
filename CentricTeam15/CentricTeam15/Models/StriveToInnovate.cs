@@ -8,5 +8,19 @@ namespace CentricTeam15.Models
 {
     public class StriveToInnovate
     {
+        [Key]
+        public int siID { get; set; }
+
+        [Required]
+        [Display(Name = "First Name")]
+        public string fistName { get; set; }
+
+        [Required]
+        [Display(Name = "Last Name")]
+        public string lastName { get; set; }
+
+        [Required]
+        [Display(Name = "Suggestion")]
+        public string siSuggestion { get; set; }
     }
 }
