@@ -343,15 +343,22 @@ namespace CentricTeam15.Controllers
 
         }
 
+
+
         [Authorize]
+
 
         public ActionResult Dashboard()
         {
             if (User.Identity.IsAuthenticated)
             {
-                //return View(db.AccountDetails.ToList());
+                var user = db.AccountDetails.Include(u => u.ID);
+
+                //var accountDetail = db.AccountDetails.Include(d => d.ID);
+
                 return View("Dashboard");
             }
+
 
             else
             {
@@ -360,7 +367,22 @@ namespace CentricTeam15.Controllers
         }
 
 
-        
+        // if (User.Identity.IsAuthenticated)
+        //public ActionResult Dashboard(int? ID)
+        //{
+        //    if (ID == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    AccountDetail accountDetail = db.AccountDetails.Find(ID);
+        //    if (accountDetail == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(accountDetail);
+        //}
+
+
 
     }
 

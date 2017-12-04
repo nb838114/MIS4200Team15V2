@@ -4,12 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Recognized Employees</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table style ="width:100%" class="table table-striped, table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.PersonGettingAward.fullName)
@@ -47,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.CurrentDateTime)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.recognitionID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.recognitionID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.recognitionID })
         </td>
     </tr>
 }
