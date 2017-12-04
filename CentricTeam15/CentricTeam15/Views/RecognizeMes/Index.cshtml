@@ -4,12 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Recognized Employees</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table style ="width:100%" class="table table-striped, table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.PersonGettingAward.fullName)
