@@ -1,68 +1,70 @@
-﻿@model CentricTeam15.Models.AccountDetail
+﻿    @*@model IEnumerable<CentricTeam15.Models.AccountDetail>*@
+    @model CentricTeam15.Models.AccountDetail
 
-@{
-    ViewBag.Title = "Dashboard";
-}
+    @{
+        ViewBag.Title = "Dashboard";
+    }
 
-<h2>Dashboard</h2>
+    <h2>Dashboard</h2>
 
-<a href="~/Views/AccountDetails/Index.cshtml" class="btn btn-info" role="button">Edit Your Profile</a>
+    <a href="~/Views/Manage/Index.cshtml" class="btn btn-info" role="button">Edit Your Profile</a>
 
-<div>
-    <h4>Dashboard</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.firstName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.firstName)
-        </dd>
+    <div>
+                <h4>Dashboard</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.firstName)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.lastName)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.firstName)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.lastName)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.lastName)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.bussinessUnit)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.lastName)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.bussinessUnit)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.bussinessUnit)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.title)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.bussinessUnit)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.title)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.title)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.hireDate)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.title)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.hireDate)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.hireDate)
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.photo)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.hireDate)
+                    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.photo)
-        </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.photo)
+                    </dt>
 
-    </dl>
-</div>
-<p>
-    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                    <dd>
+                        @Html.DisplayFor(model => model.photo)
+                    </dd>
+
+                </dl>
+            </div>
+            <p>
+                @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@
+                        //@Html.ActionLink("Back to List", "Index")
+                    </p>
