@@ -7,15 +7,15 @@
 <h2>Details</h2>
 
 <div>
-    <h4>More About this User</h4>
+    <h4>RecognizeMe</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.PersonGettingAward.fullName)
+            @Html.DisplayNameFor(model => model.PersonGettingAward.firstName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PersonGettingAward.fullName)
+            @Html.DisplayFor(model => model.PersonGettingAward.firstName)
         </dd>
 
         <dt>
@@ -53,6 +53,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.recognitionID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

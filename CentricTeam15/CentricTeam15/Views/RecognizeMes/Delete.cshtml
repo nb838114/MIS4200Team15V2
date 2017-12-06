@@ -4,19 +4,19 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete Recognized Users</h2>
+<h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-
+    <h4>RecognizeMe</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.PersonGettingAward.fullName)
+            @Html.DisplayNameFor(model => model.PersonGettingAward.firstName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PersonGettingAward.fullName)
+            @Html.DisplayFor(model => model.PersonGettingAward.firstName)
         </dd>
 
         <dt>
