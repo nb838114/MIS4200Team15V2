@@ -48,7 +48,7 @@ namespace CentricTeam15.Controllers
         // GET: RecognizeMes/Create
         public ActionResult Create()
         {
-            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "firstName");
+            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "fullName");
             return View();
         }
 
@@ -67,7 +67,7 @@ namespace CentricTeam15.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "firstName", recognizeMe.ID);
+            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "fullName", recognizeMe.ID);
             return View(recognizeMe);
         }
 
@@ -83,7 +83,7 @@ namespace CentricTeam15.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "firstName", recognizeMe.ID);
+            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "fullName", recognizeMe.ID);
             return View(recognizeMe);
         }
 
@@ -100,7 +100,7 @@ namespace CentricTeam15.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "firstName", recognizeMe.ID);
+            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "fullName", recognizeMe.ID);
             return View(recognizeMe);
         }
 

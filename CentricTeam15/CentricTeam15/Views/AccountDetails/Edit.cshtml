@@ -69,6 +69,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.photo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                <img src="~/_Images/@Model.photo" height="400" />
                 <input id="photo" type="file" name="photo" />
             </div>
         </div>
@@ -82,13 +83,13 @@
             </div>
         </div>*@
 
-        @*<div class="form-group">
+        <div class="form-group">
             @Html.LabelFor(model => model.userBiography, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.TextAreaFor(model => model.userBiography, new { htmlAttributes = new { @class = "form-control" }, id = "userBiography", cols = "80", rows = "9" })
                 @Html.ValidationMessageFor(model => model.userBiography, "", new { @class = "text-danger" })
             </div>
-        </div>*@
+        </div>
 
 
 
