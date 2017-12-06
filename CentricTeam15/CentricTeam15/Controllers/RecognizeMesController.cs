@@ -31,13 +31,13 @@ namespace CentricTeam15.Controllers
         }
 
         // GET: RecognizeMes/Details/5
-        public ActionResult Details(int? ID)
+        public ActionResult Details(int? id)
         {
-            if (ID == null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            RecognizeMe recognizeMe = db.RecognizeMes.Find(ID);
+            RecognizeMe recognizeMe = db.RecognizeMes.Find(id);
             if (recognizeMe == null)
             {
                 return HttpNotFound();
@@ -48,7 +48,7 @@ namespace CentricTeam15.Controllers
         // GET: RecognizeMes/Create
         public ActionResult Create()
         {
-            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "fullName");
+            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "firstName");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace CentricTeam15.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,recognitionID,bussinessUnit,description,CoreValue,CurrentDateTime")] RecognizeMe recognizeMe)
+        public ActionResult Create([Bind(Include = "recognitionID,ID,bussinessUnit,description,CoreValue,CurrentDateTime")] RecognizeMe recognizeMe)
         {
             if (ModelState.IsValid)
             {
@@ -67,23 +67,23 @@ namespace CentricTeam15.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "fullName", recognizeMe.ID);
+            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "firstName", recognizeMe.ID);
             return View(recognizeMe);
         }
 
         // GET: RecognizeMes/Edit/5
-        public ActionResult Edit(int? ID)
+        public ActionResult Edit(int? id)
         {
-            if (ID == null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            RecognizeMe recognizeMe = db.RecognizeMes.Find(ID);
+            RecognizeMe recognizeMe = db.RecognizeMes.Find(id);
             if (recognizeMe == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "fullName", recognizeMe.ID);
+            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "firstName", recognizeMe.ID);
             return View(recognizeMe);
         }
 
@@ -92,7 +92,7 @@ namespace CentricTeam15.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,bussinessUnit,description,CoreValue,CurrentDateTime")] RecognizeMe recognizeMe)
+        public ActionResult Edit([Bind(Include = "recognitionID,ID,bussinessUnit,description,CoreValue,CurrentDateTime")] RecognizeMe recognizeMe)
         {
             if (ModelState.IsValid)
             {
@@ -100,18 +100,18 @@ namespace CentricTeam15.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.employeeID = new SelectList(db.AccountDetails, "ID", "fullName", recognizeMe.ID);
+            ViewBag.ID = new SelectList(db.AccountDetails, "ID", "firstName", recognizeMe.ID);
             return View(recognizeMe);
         }
 
         // GET: RecognizeMes/Delete/5
-        public ActionResult Delete(int? ID)
+        public ActionResult Delete(int? id)
         {
-            if (ID == null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            RecognizeMe recognizeMe = db.RecognizeMes.Find(ID);
+            RecognizeMe recognizeMe = db.RecognizeMes.Find(id);
             if (recognizeMe == null)
             {
                 return HttpNotFound();
@@ -122,9 +122,9 @@ namespace CentricTeam15.Controllers
         // POST: RecognizeMes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int ID)
+        public ActionResult DeleteConfirmed(int id)
         {
-            RecognizeMe recognizeMe = db.RecognizeMes.Find(ID);
+            RecognizeMe recognizeMe = db.RecognizeMes.Find(id);
             db.RecognizeMes.Remove(recognizeMe);
             db.SaveChanges();
             return RedirectToAction("Index");
