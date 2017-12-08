@@ -11,6 +11,10 @@
 {
     @Html.AntiForgeryToken()
     
+    //Currently, the edit page does not work because "readonly" and "disabled" are enabled for each variable except comments,
+        //as that is what we discussed with our PO. The edit page works if we remove "readonly" and "disabled" for each of them,
+            //but we are keeping them for now to see if we can do so. If not, we will go back to the old method of editing all content
+
     <div class="form-horizontal">
         <h4>Edit Their Comment</h4>
         <hr />
@@ -20,7 +24,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ID, "Employee Name", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("ID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("ID", null, htmlAttributes: new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
                 @Html.ValidationMessageFor(model => model.ID, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -28,7 +32,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.bussinessUnit, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.bussinessUnit, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.bussinessUnit, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.bussinessUnit, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -44,7 +48,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CoreValue, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.CoreValue, htmlAttributes: new { @class = "form-control" })
+                @Html.EnumDropDownListFor(model => model.CoreValue, htmlAttributes: new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
                 @Html.ValidationMessageFor(model => model.CoreValue, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -52,7 +56,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CurrentDateTime, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CurrentDateTime, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.CurrentDateTime, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.CurrentDateTime, "", new { @class = "text-danger" })
             </div>
         </div>
