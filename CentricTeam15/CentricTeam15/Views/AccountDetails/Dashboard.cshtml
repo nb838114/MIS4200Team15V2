@@ -7,8 +7,15 @@
 
     <h2>My Profile</h2>
 
-    <a href="~/Views/Manage/Index.cshtml" class="btn btn-info" role="button">Edit Your Profile</a>
+    <p>
 
+    </p>
+
+    @Html.ActionLink("Manage Your Profile", "Index", "Manage")
+    
+    <p>
+
+    </p>
 
     <div>
                 <h4>Dashboard</h4>
@@ -59,7 +66,7 @@
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.photo)
+                        <img src="~/_Images/@Model.photo" height="400" />
                     </dd>
 
                 </dl>
