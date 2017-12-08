@@ -356,41 +356,20 @@ public ActionResult Details(Guid? id)
 
 
         [Authorize]
-
-
         public ActionResult Dashboard()
         {
-            if (User.Identity.IsAuthenticated)
+            Guid memberID;
+            Guid.TryParse(User.Identity.GetUserId(), out memberID);
+
+            AccountDetail dashboard = db.AccountDetails.Find(memberID);
+            if (dashboard == null)
             {
-                var user = db.AccountDetails.Include(u => u.ID);
-
-                //var accountDetail = db.AccountDetails.Include(d => d.ID);
-
-                return View("Dashboard");
+                return HttpNotFound();
             }
 
-
-            else
-            {
-                return View("NotAuthorized");
-            }
+            return View(dashboard);
         }
 
-
-        // if (User.Identity.IsAuthenticated)
-        //public ActionResult Dashboard(int? ID)
-        //{
-        //    if (ID == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    AccountDetail accountDetail = db.AccountDetails.Find(ID);
-        //    if (accountDetail == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(accountDetail);
-        //}
 
 
 
