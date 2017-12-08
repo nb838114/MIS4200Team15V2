@@ -18,21 +18,22 @@ namespace CentricTeam15.Controllers
         private AccountDetailsContext db = new AccountDetailsContext();
 
         // GET: AccountDetails
-        public ActionResult Index()
-        {
-            if (User.Identity.IsAuthenticated)
-            {
-            return View(db.AccountDetails.ToList());
-            }
-
-            else
-            {
-                return View("NotAuthorized");
-            }
+        public ActionResult Index(string searchString)
+  {
+ var testusers = from u in db.AccountDetails select u;
+          if (!String.IsNullOrEmpty(searchString))
+     {
+ 	testusers = testusers.Where(u => u.lastName.Contains(searchString)
+ || u.firstName.Contains(searchString));
+ // if here, users were found so view them
+ 	return View(testusers.ToList());
         }
+       return View(db.AccountDetails.ToList());
+     
+  }
 
-        // GET: AccountDetails/Details/5
-        public ActionResult Details(Guid? id)
+// GET: AccountDetails/Details/5
+public ActionResult Details(Guid? id)
         {
             if (id == null)
             {
@@ -355,41 +356,20 @@ namespace CentricTeam15.Controllers
 
 
         [Authorize]
-
-
         public ActionResult Dashboard()
         {
-            if (User.Identity.IsAuthenticated)
+            Guid memberID;
+            Guid.TryParse(User.Identity.GetUserId(), out memberID);
+
+            AccountDetail dashboard = db.AccountDetails.Find(memberID);
+            if (dashboard == null)
             {
-                var user = db.AccountDetails.Include(u => u.ID);
-
-                //var accountDetail = db.AccountDetails.Include(d => d.ID);
-
-                return View("Dashboard");
+                return HttpNotFound();
             }
 
-
-            else
-            {
-                return View("NotAuthorized");
-            }
+            return View(dashboard);
         }
 
-
-        // if (User.Identity.IsAuthenticated)
-        //public ActionResult Dashboard(int? ID)
-        //{
-        //    if (ID == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    AccountDetail accountDetail = db.AccountDetails.Find(ID);
-        //    if (accountDetail == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(accountDetail);
-        //}
 
 
 
