@@ -131,6 +131,7 @@ namespace CentricTeam15.Controllers
 
                             file.SaveAs(Server.MapPath("~/_Images/" + userData.photo));  //(G)
 
+                            TempData["oldPhoto"] = userData.photo;
                         }
                     }
                     db.AccountDetails.Add(userData);
@@ -162,6 +163,7 @@ namespace CentricTeam15.Controllers
 
             Guid memberID;
             Guid.TryParse(User.Identity.GetUserId(), out memberID);
+            //TempData["oldPhoto"] = userData.photo;
 
             return View(user);
           
@@ -275,6 +277,13 @@ namespace CentricTeam15.Controllers
                         file.SaveAs(Server.MapPath("~/_Images/" + userData.photo));
 
                     }
+                }
+                else
+                {
+                    //var oldUser = db.AccountDetails.Find(userData.ID);
+                    //userData.photo = oldUser.photo;
+
+                    userData.photo = TempData["oldPhoto"].ToString();
                 }
 
                 db.SaveChanges();
