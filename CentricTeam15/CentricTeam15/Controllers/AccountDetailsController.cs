@@ -20,7 +20,7 @@ namespace CentricTeam15.Controllers
         // GET: AccountDetails
         public ActionResult Index(string searchString)
   {
- var testusers = from u in db.AccountDetails select u;
+            var testusers = from u in db.AccountDetails select u;
           if (!String.IsNullOrEmpty(searchString))
      {
  	testusers = testusers.Where(u => u.lastName.Contains(searchString)
