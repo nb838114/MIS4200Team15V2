@@ -85,6 +85,7 @@ namespace CentricTeam15.Controllers
             }
             ViewBag.ID = new SelectList(db.AccountDetails, "ID", "fullName", recognizeMe.ID);
             return View(recognizeMe);
+
         }
 
         // POST: RecognizeMes/Edit/5

@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>User Directory</h2>
+<h2>Employee Directory</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*@Html.ActionLink("Create New", "Create")*@
 </p>
 
 
@@ -76,9 +76,9 @@
             @Html.Raw(System.Web.HttpUtility.HtmlDecode(item.userBiography))
         </td>*@
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.ID }) |*@
+            @Html.ActionLink("Learn More About this Employee", "Details", new { id=item.ID }) @*|*@
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.ID })*@
         </td>
     </tr>
 }

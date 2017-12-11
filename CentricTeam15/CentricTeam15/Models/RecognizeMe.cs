@@ -17,7 +17,7 @@ namespace CentricTeam15.Models
         public Guid ID { get; set; }
 
         [Required]
-        [Display(Name = "Business Unit of Person Being Recognized")]
+        [Display(Name = "BU of Person Being Recognized")]
         public string bussinessUnit { get; set; }
 
         [Display(Name = "Comment")]
