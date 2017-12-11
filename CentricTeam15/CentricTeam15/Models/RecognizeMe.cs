@@ -20,10 +20,10 @@ namespace CentricTeam15.Models
         [Display(Name = "BU of Person Being Recognized")]
         public string bussinessUnit { get; set; }
 
-        [Display(Name = "Comment")]
+        [Display(Name = "Why They're Awesome")]
         public string description { get; set; }
 
-        [Display(Name = "Core Value")]
+        [Display(Name = "Core Value Achieved")]
         public award CoreValue { get; set; }
 
         public enum award
@@ -42,7 +42,7 @@ namespace CentricTeam15.Models
 
         public virtual AccountDetail PersonGettingAward { get; set; }
 
-        [Display(Name = "Date Recognition is Given")]
+        [Display(Name = "Date Recognition was Given")]
         [DataType(DataType.DateTime)]
         [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
         public DateTime CurrentDateTime { get; set; }

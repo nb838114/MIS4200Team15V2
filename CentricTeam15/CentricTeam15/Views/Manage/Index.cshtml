@@ -7,7 +7,7 @@
 
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
-    <h4>Edit and update your profile</h4>
+    <h4>Edit and Update your Profile</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>Password:</dt>
@@ -23,6 +23,12 @@
             }
             ]
         </dd>
+        <dt>Profile:</dt>
+        <dd>
+            [
+            @Html.ActionLink("Edit Your Profile", "Index", "AccountDetails")
+            ]
+        </dd>
     </dl>
 
     @*<dt>Dashboard</dt>
@@ -31,11 +37,12 @@
     </dd>
     </dl>*@
 
-    <dt>Profile:</dt>
+
+    @*<dt>Profile:</dt>
+
     <dd>
         @Html.ActionLink("Edit Your Profile", "Index", "AccountDetails")
-    </dd>
-    </dl>
+    </dd>*@
 
         @*<dt>External Logins:</dt>
         <dd>
