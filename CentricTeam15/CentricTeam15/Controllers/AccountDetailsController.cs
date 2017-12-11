@@ -20,15 +20,28 @@ namespace CentricTeam15.Controllers
         // GET: AccountDetails
         public ActionResult Index(string searchString)
   {
- var testusers = from u in db.AccountDetails select u;
-          if (!String.IsNullOrEmpty(searchString))
-     {
- 	testusers = testusers.Where(u => u.lastName.Contains(searchString)
- || u.firstName.Contains(searchString));
- // if here, users were found so view them
- 	return View(testusers.ToList());
-        }
-       return View(db.AccountDetails.ToList());
+            if (User.Identity.IsAuthenticated)
+            {
+                var testusers = from u in db.AccountDetails select u;
+
+                if (!String.IsNullOrEmpty(searchString))
+                {
+
+                    testusers = testusers.Where(u => u.lastName.Contains(searchString)
+                    || u.firstName.Contains(searchString));
+                    // if here, users were found so view them
+
+                    return View(testusers.ToList());
+                }
+
+                return View(db.AccountDetails.ToList());
+            }
+
+            else
+            {
+                return View("NotAuthorized");
+            }
+
      
   }
 
