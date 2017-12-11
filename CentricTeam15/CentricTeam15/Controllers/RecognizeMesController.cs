@@ -80,6 +80,7 @@ namespace CentricTeam15.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             RecognizeMe recognizeMe = db.RecognizeMes.Find(id);
+            TempData["user"] = recognizeMe.ID;
             if (recognizeMe == null)
             {
                 return HttpNotFound();
@@ -96,8 +97,12 @@ namespace CentricTeam15.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "recognitionID,ID,bussinessUnit,description,CoreValue,CurrentDateTime")] RecognizeMe recognizeMe)
         {
-            if (ModelState.IsValid)
+           // if (ModelState.IsValid)
             {
+                Guid rID;
+                Guid.TryParse(TempData["user"].ToString(), out rID);
+
+                recognizeMe.ID = rID;
                 db.Entry(recognizeMe).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -141,7 +146,7 @@ namespace CentricTeam15.Controllers
             base.Dispose(disposing);
         }
 
-        [HttpPost, ActionName("LeaderBoards")]
+        //[HttpPost, ActionName("LeaderBoards")]
         public ActionResult LeaderBoard(Guid? id)
         {
             var RecognizeMes = db.RecognizeMes.Include(r => r.PersonGettingAward);

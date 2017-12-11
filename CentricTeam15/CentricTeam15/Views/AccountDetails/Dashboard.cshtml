@@ -11,7 +11,9 @@
 
     </p>
 
-    @Html.ActionLink("Manage Your Profile", "Index", "Manage")
+    @*@Html.ActionLink("Manage Your Profile", "Index", "Manage")*@
+@Html.ActionLink("Edit Your Profile", "Edit", new { id = Model.ID }) |
+@Html.ActionLink("Back to Employee Directory", "Index")
     
     <p>
 
@@ -84,6 +86,6 @@
                 </dl>
             </div>
             <p>
-                @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-                @Html.ActionLink("Back to List", "Index")
+                @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+                @Html.ActionLink("Back to List", "Index")*@
                     </p>

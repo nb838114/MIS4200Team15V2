@@ -5,15 +5,19 @@
 
 }
 
-<h2>LeaderBoards</h2>
-@{ 
+<h2>Leader Board</h2>
+@{
     foreach (var item in awardsList)
-    { 
+    {
         var delimiters = new char[] { ',', '=', '{', '}' };
         var parts = item.ToString().Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
+
+        <span> This person was recognized </span>
         @parts[3].ToString();
-        @parts[5].ToString();
-        <span> times</span>
+        @*@parts[5].ToString();*@
+        <span> times!</span>
         <br/><br/>
     }
+
+    @Html.ActionLink("Back to List", "Index")
 }
