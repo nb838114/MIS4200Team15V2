@@ -24,7 +24,7 @@ namespace CentricTeam15.Models
         public string fullName { get { return lastName + ", " + firstName; } }
 
         [Required]
-        [Display(Name = "Bussiness Unit")]
+        [Display(Name = "Business Unit")]
         public string bussinessUnit { get; set; }
 
         [Required]
@@ -32,13 +32,13 @@ namespace CentricTeam15.Models
         public string title { get; set; }
 
         [Required]
-        [Display(Name = "Hire Date")]
+        [Display(Name = "Centric Anniversary")]
         public string hireDate { get; set; }
 
         [Display(Name = "Photo")]
         public string photo { get; set; }
 
-        [Display(Name = "Biography")]
+        [Display(Name = "Biography & Skills")]
         public string userBiography { get; set; }
 
 
