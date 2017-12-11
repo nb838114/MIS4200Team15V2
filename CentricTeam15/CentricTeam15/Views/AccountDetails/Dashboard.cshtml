@@ -69,9 +69,19 @@
                         <img src="~/_Images/@Model.photo" height="400" />
                     </dd>
 
+                    <dt>
+                        @Html.DisplayNameFor(model => model.userBiography)
+                        @*@Html.Raw(System.Web.HttpUtility.HtmlDecode(Model.userBiography))*@
+                    </dt>
+
+                    <dd>
+                        @*@Html.DisplayFor(model => model.userBiography)*@
+                        @Html.Raw(System.Web.HttpUtility.HtmlDecode(Model.userBiography))
+                    </dd>
+
                 </dl>
             </div>
             <p>
-                @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@
+                @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
                 @Html.ActionLink("Back to List", "Index")
                     </p>
