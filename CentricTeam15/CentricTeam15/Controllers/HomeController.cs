@@ -15,14 +15,14 @@ namespace CentricTeam15.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "About Us.";
+            ViewBag.Message = "About Us";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Contact Us.";
+            ViewBag.Message = "Contact Us";
 
             return View();
         }

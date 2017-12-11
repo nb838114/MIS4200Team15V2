@@ -227,10 +227,14 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="_Images\Centric Team 2.jpg" />
+    <Content Include="_Images\Centric Team.jpg" />
     <Content Include="_Images\CentricLogo.PNG" />
     <Content Include="_Images\Chloe Marathon pic.jpg" />
     <Content Include="_Images\Commit to Delivery Excellence- Lily.jpg" />
     <Content Include="_Images\Embrace Integrity and Openness 2.jpg" />
+    <Content Include="_Images\high- five 2.jpg" />
+    <Content Include="_Images\high- five.jpg" />
     <Content Include="_Images\Ignite Passion for the Greater Good sized 3.jpg" />
     <Content Include="_Images\Invest in Exceptional Culture 2 sized 1.jpg" />
     <Content Include="_Images\Live a Balanced Life 2.jpg" />

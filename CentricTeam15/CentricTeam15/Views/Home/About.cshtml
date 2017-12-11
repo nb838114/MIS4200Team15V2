@@ -8,7 +8,59 @@
 
     ViewBag.Title = "About High-FIVE";
 }
-<h2>@ViewBag.Title.</h2>
+<h1>@ViewBag.Title</h1>
 
-<p>High-Five will allow Centric employees to be recognized in a fun way. The employee recognition is based on Centric's core values and can lead to increased employee moral and productivity. Employees will be featured on the leaderboard in order to recognize top employees for thier hard work through our core values. More information about these values and ways to increase your recognition score can be found on the home page.</p>
+<img src="~/_Images/high- five 2.jpg" alt="High Five" style="height:100%; width:100%">
+
+  
+<br />
+<br />
+
+<h3>What is High- Five?</h3>
+<p>
+    Centric's High- Five Employee Recognition system is an engaging and fun way to recognize Centric employees in real- time!
+    </p>
+<br />
+<p>
+    Centric's mission with implementing this new system is to provide a platform where feedback can be received from peers, mentors, and others on how well you are doing in the areas of our seven core values.
+    It's also a fun way for you to recognize others as well.
+
+</p>
+
+<br />
+
+<p>
+    Need a refresher on Centric's core values? Click the link below to navigate to the "Core Values" page!
+</p>
+
+<input type="button" class="btn btn-large btn-warning" value="Learn about Centric's Core Values" onclick="location.href='@Url.Action("CoreValues", "Home")'" />
+
+
+<br />
+<br />
+
+<h3>
+    Don't be shy with your High-Fives!
+</h3> 
+
+ <p>
+   Tell them what they are doing well, the things you admire about them, and how much you appreciate them!
+ </p>
+
+<br />
+
+<p>
+    Login in and navigate to the "Recognize Someone" page to get started today!
+</p>
+
+<input type="button" class="btn btn-large btn-warning" value="Recognize Someone" onclick="location.href='@Url.Action("Index", "RecognizeMes")'" />
+<br />
+
+<br />
+
+
+    @*<p>High-Five allows Centric employees to be recognized in a fun way.
+    The employee recognition is based on Centric's core values and can lead to increased employee moral and productivity. 
+    Employees will be featured on the leaderboard in order to recognize top employees for thier hard work through our core values.
+    More information about these values and ways to increase your recognition score can be found on the home page.</p>*@
 
