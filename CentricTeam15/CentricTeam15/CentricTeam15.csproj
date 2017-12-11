@@ -306,6 +306,7 @@
     <Content Include="Views\CommitToDeliveryExcellences\Delete.cshtml" />
     <Content Include="Views\CommitToDeliveryExcellences\Details.cshtml" />
     <Content Include="Views\CommitToDeliveryExcellences\Index.cshtml" />
+    <Content Include="Views\RecognizeMes\LeaderBoards.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

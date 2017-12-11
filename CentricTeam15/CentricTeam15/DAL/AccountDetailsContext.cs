@@ -17,6 +17,8 @@ namespace CentricTeam15.DAL
 
         public DbSet<AccountDetail> AccountDetails { get; set; }
         public DbSet<RecognizeMe> RecognizeMes { get; set; }
+
+        //Even though functionality is removed from page, do not remove will break proj
         public DbSet<CommitToDeliveryExcellence> CommitToDeliveryExcellences { get; set; }
         public DbSet<EmbraceIntegrityandOpenness> EmbraceIntegrityandOpennesses { get; set; }
         public DbSet<IgnitePassionForTheGreaterGood> IgnitePassionForTheGreaterGoods { get; set; }
@@ -24,7 +26,6 @@ namespace CentricTeam15.DAL
         public DbSet<LiveABalancedLife> LiveABalancedLifes { get; set; }
         public DbSet<PracticeResponsibleStewardship> PracticeResponsibleStewardships { get; set; }
         public DbSet<StriveToInnovate> StriveToInnovates { get; set; }
-
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

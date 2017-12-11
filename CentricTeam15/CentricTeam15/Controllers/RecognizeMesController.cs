@@ -20,8 +20,9 @@ namespace CentricTeam15.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                var recognizeMes = db.RecognizeMes.Include(r => r.PersonGettingAward);
-                return View(recognizeMes.ToList());
+                var RecognizeMes = db.RecognizeMes.Include(r => r.PersonGettingAward);
+                return View(RecognizeMes.ToList());
+
             }
 
             else
@@ -138,6 +139,34 @@ namespace CentricTeam15.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        [HttpPost, ActionName("LeaderBoards")]
+        public ActionResult LeaderBoard(Guid? id)
+        {
+            var RecognizeMes = db.RecognizeMes.Include(r => r.PersonGettingAward);
+
+            if (id != null)
+            {
+                var awards = (from aw in RecognizeMes
+                              group aw by new
+                              {
+                                  e = aw.ID
+                              }
+                              into g select new
+                              {
+                                  receiverID = g.Key.e,
+                                  AwardCount = g.Count()
+                              });
+                ViewBag.AwardList = awards.ToList();
+
+                return View("LeaderBoards");
+            }
+
+            else
+            {
+               return View(RecognizeMes.ToList());
+            }
         }
     }
 }

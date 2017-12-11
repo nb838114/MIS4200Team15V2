@@ -48,7 +48,8 @@
         </td>
         <td>
             @Html.ActionLink("Edit Comment", "Edit", new { id=item.recognitionID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.recognitionID }) 
+            @Html.ActionLink("Details", "Details", new { id = item.recognitionID }) |
+            @Html.ActionLink("Show individual results", "LeaderBoards", new { id = item.recognitionID})
         </td>
     </tr>
 }
